@@ -17,6 +17,8 @@ body {
   // background-color: rgb(70, 70, 109);
 
   &__nav {
+    @include flex(flex, center, center);
+    // position: fixed;
     margin-bottom: $mb-0-75;
     // z-index: $z-fixed;
     // margin: 0 auto;
@@ -25,7 +27,7 @@ body {
 
     &-container {
       z-index: $z-fixed;
-      max-width: 40vmax;
+      max-width: 45vmax;
       margin: 0 $mb-1;
       padding: $mb-1 $mb-1-5;
       border-radius: 50px;
