@@ -1,0 +1,123 @@
+@use "common" as *;
+
+.top {
+  height: $header-height;
+}
+
+// =========== BODY =============
+body {
+  background-color: hsl(0, 0%, 10%);
+}
+
+// ================= NAVBAR ================
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  // background-color: rgb(70, 70, 109);
+
+  &__nav {
+    margin-bottom: $mb-0-75;
+    // z-index: $z-fixed;
+    // margin: 0 auto;
+    // background-color: yellow;
+    // border: $border;
+
+    &-container {
+      z-index: $z-fixed;
+      max-width: 40vmax;
+      margin: 0 auto;
+      padding: $mb-1-25 $mb-1-5;
+      border-radius: 50px;
+      background: linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.6)
+      );
+      backdrop-filter: blur(5px);
+      box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
+      // position: fixed;
+      // border: $border;
+
+      &__list {
+        @include flex(flex, center, center);
+        column-gap: $mb-0-5;
+        // border: $border;
+
+        &-item {
+          @include font($normal-font-size, $h1-font-size, $font-medium);
+          color: $white-color;
+          // border: $border;
+
+          &__link {
+            padding: 12px 10.5px 7px;
+            border-radius: 50px;
+            transition: $ease-io $img-transition;
+
+            &:hover {
+              background-color: $main-green-color;
+              transition: $ease-io $img-transition;
+            }
+
+            &-icon {
+              // border: $border;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// =========== FIRSTROW ===========
+.firstrow {
+  &__container {
+    margin: 0 $mb-1;
+
+    // TITLE
+    &-title {
+      color: $white-color;
+      letter-spacing: 1.5px;
+
+      span{
+        color: $main-green-color;
+      }
+
+      &__first{
+        font-size: $biggest-font-size;
+      }
+
+      &__second{
+        font-size: $h2-font-size;
+      }
+    }
+
+    // LINKS
+    &-links{
+      @include font($body-font, $normal-font-size, $font-semi-bold);
+      @include flex(flex, center, center);
+      column-gap: $mb-1-5;
+      margin-bottom: $mb-1-5;
+
+      &__github, &__curriculum{
+        letter-spacing: 1.5px;
+        padding: $mb-0-75 $mb-1-5;
+        color: $white-color;
+        border-radius: 1px;
+        border-width: 1.5px;
+        border-style: solid;
+        border-color: $white-color;
+        cursor: pointer;
+        transition: $ease-io $img-transition;
+
+        &:hover{
+          color: $main-green-color;
+          border-color: $main-green-color;
+          transition: $ease-io $img-transition
+        }
+      }
+    }
+  }
+}
+
+// ========== SECONDROW ============
