@@ -26,8 +26,8 @@ body {
     &-container {
       z-index: $z-fixed;
       max-width: 40vmax;
-      margin: 0 auto;
-      padding: $mb-1-25 $mb-1-5;
+      margin: 0 $mb-1;
+      padding: $mb-1 $mb-1-5;
       border-radius: 50px;
       background: linear-gradient(
         to left top,
@@ -78,28 +78,30 @@ body {
     &-title {
       color: $white-color;
       letter-spacing: 1.5px;
+      // text-indent: 6px;
 
-      span{
+      span {
         color: $main-green-color;
       }
 
-      &__first{
+      &__first {
         font-size: $biggest-font-size;
       }
 
-      &__second{
+      &__second {
         font-size: $h2-font-size;
       }
     }
 
     // LINKS
-    &-links{
+    &-links {
       @include font($body-font, $normal-font-size, $font-semi-bold);
       @include flex(flex, center, center);
       column-gap: $mb-1-5;
       margin-bottom: $mb-1-5;
 
-      &__github, &__curriculum{
+      &__github,
+      &__curriculum {
         letter-spacing: 1.5px;
         padding: $mb-0-75 $mb-1-5;
         color: $white-color;
@@ -110,10 +112,10 @@ body {
         cursor: pointer;
         transition: $ease-io $img-transition;
 
-        &:hover{
+        &:hover {
           color: $main-green-color;
           border-color: $main-green-color;
-          transition: $ease-io $img-transition
+          transition: $ease-io $img-transition;
         }
       }
     }
