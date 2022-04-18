@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="top"></div>
-    <header class="header">
+    <!-- <header class="header">
       <a
         class="header__logo"
         style="visibility: hidden; display: none"
@@ -80,7 +80,8 @@
           </ul>
         </div>
       </nav>
-    </header>
+    </header> -->
+
     <main class="main container">
       <section class="firstrow section">
         <div class="firstrow__container container">
@@ -119,13 +120,49 @@
         </div>
       </section>
 
-      <section class="secondrow">
-        <div class="secondrow__container">
+      <section class="secondrow section">
+        <div class="secondrow__container container">
+          <div class="secondrow__container-title section-title">
+            <h1 class="secondrow__container-title__h1">
+              <span>A</span>bout me
+            </h1>
+          </div>
+          <div class="secondrow__container-desc">
+            <p class="secondrow__container-desc__text">
+              I'm a Front-end developer with a degree in computer science.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <section class="thirdrow section">
+        <div class="thirdrow__container container">
+          <div class="thirdrow__container-title section-title">
+            <h1 class="thirdrow__container-title__h1"><span>P</span>rojects</h1>
+          </div>
+          <div class="thirdrow__container-glide">
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">Slide 1</li>
+                  <li class="glide__slide">Slide 2</li>
+                  <li class="glide__slide">Slide 3</li>
+                  <li class="glide__slide">Slide 4</li>
+                  <li class="glide__slide">Slide 5</li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer"></footer>
-    <script src="js/index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -1,6 +1,12 @@
 @use "variables" as *;
 @forward "variables";
 
+// Glide Scss
+@use "../node_modules/@glidejs/glide/src/assets/sass/glide.core" as *;
+@forward "../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// @use "../node_modules/@glidejs/glide/src/assets/sass/glide.theme" as *;
+// @forward "../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
 // THE STANDARD
 * {
   padding: 0;
