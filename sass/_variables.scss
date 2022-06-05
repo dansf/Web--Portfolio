@@ -3,13 +3,16 @@ $border: 1px solid red;
 
 // COLORS
 $main-color: 158;
-$main-green-color: hsl($main-color, 71%, 44%);
+$main-green-color: hsl($main-color, 71%, 62%);
 $sub-green-color: hsl($main-color, 55%, 70%);
+$gray-color: hsl($main-color, 0%, 95%);
+$background-color: hsla($main_color, 20%, 2%, .8);
 $black-color: #000;
 $white-color: #fff;
 
 // FONTS
 $body-font: "Poppins", sans-serif;
+$second-font: 'La Belle Aurore', cursive;
 $biggest-font-size: 2rem;
 $h1-font-size: 1.5rem;
 $h2-font-size: 1.25rem;
@@ -25,7 +28,7 @@ $font-semi-bold: 600;
 $font-bold: 700;
 
 // LETTER SPACING
-$normal-spacing: 1.5px;
+$letter-spacing: 1.5px;
 
 // MARGENES BOTTOM
 $mb-0-25: .25rem;
@@ -47,7 +50,7 @@ $z-tooltip: 10;
 $z-fixed: 100;
 
 // HOVER OVERLAY
-$ease-io: ease-in-out;
+$ease-in: ease-in-out;
 $img-transition: .3s;
 $img-hidden: hidden;
 $img-scale: scale(1.1);

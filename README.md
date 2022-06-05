@@ -17,7 +17,7 @@
 
 <h4>APIs</h4>
 <ul>
-  <li>Framer Motion</li>
+  <li>GlideJs</li>
   <li>FontAwesome</li>
 </ul>
 

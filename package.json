@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "author": "Dansfig",
+  "description": "<h2 align=\"center\">DanSFig - Portfolio 🧔🏿</h2>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/dansf/Web--Portfolio.git",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dansf/Web--Portfolio/issues"
+  },
+  "homepage": "https://github.com/dansf/Web--Portfolio#readme",
+  "dependencies": {
+    "global": "^4.4.0",
+    "typescript": "^4.7.2"
+  }
+}

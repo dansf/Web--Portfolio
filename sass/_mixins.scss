@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+// MIXINS
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid {
+  display: grid;
+  gap: $mb-2;
+}
+
+@mixin transition {
+  transition: $ease-in $img-transition;
+}
+
+@mixin font {
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  font-weight: $font-medium;
+}

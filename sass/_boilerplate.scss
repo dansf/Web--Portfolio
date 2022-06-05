@@ -1,0 +1,85 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "functions" as *;
+
+// THE STANDARD
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: $letter-spacing;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $body-font;
+  font-weight: $font-semi-bold;
+  text-decoration: none;
+}
+
+p {
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  font-weight: $font-semi-bold;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  background-color: $white-color;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  outline: none;
+  background-color: $white-color;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// REUSABLE CLASSES
+.container {
+  width: 100%;
+  max-width: rem(968);
+  margin: 0 $mb-1;
+  border: $border;
+}
+
+.section {
+  padding: $mb-4-5 0 $mb-2-5;
+  max-height: calc(100% + 100vh);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.section-title {
+  margin-bottom: $mb-2-5;
+}
+
+.active-link {
+  background-color: $main-green-color;
+  transition: $ease-in $img-transition;
+}
+
+.show-menu {
+  right: 0 !important;
+  transition: right $ease-in $img-transition;
+}

@@ -1,184 +1,178 @@
-@use "common" as *;
+@use "import" as *;
 
-.top {
-  height: $header-height;
-}
-
-// =========== BODY =============
-body {
-  background-color: hsl(0, 0%, 10%);
-}
+// ================= BODY ================
+// body{
+//   background-color: hsla($main_color, 20%, 2%, .8);
+// }
 
 // ================= NAVBAR ================
 .header {
   width: 100%;
   position: fixed;
-  bottom: 0;
+  top: 0;
+  left: 0;
+  height: $header-height;
   z-index: $z-fixed;
-  // background-color: rgb(70, 70, 109);
+  background: transparent;
+  backdrop-filter: blur(0.2rem);
+  @include flex;
 
   &__nav {
-    @include flex(flex, center, center);
-    // position: fixed;
-    margin-bottom: $mb-0-75;
-    // z-index: $z-fixed;
-    // margin: 0 auto;
-    // background-color: yellow;
-    // border: $border;
+    @include flex;
+    justify-content: space-between;
+    height: 100%;
 
     &-container {
-      max-width: 45vmax;
-      margin: 0 $mb-1;
-      padding: $mb-1 $mb-1-5;
-      border-radius: 50px;
-      background: linear-gradient(
-        to left top,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.6)
-      );
-      backdrop-filter: blur(2.5px);
-      box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
-      // position: fixed;
-      // border: $border;
+      position: relative;
+
+      @media screen and (max-width: rem(767)) {
+        position: absolute;
+        top: 0;
+        right: -80%;
+        width: 70%;
+        height: 100vh;
+        background-color: $white-color;
+        box-shadow: -5px 0 10px 5px hsla(0, 0%, 80%, 0.5);
+        z-index: $z-fixed;
+        transition: right $ease-in $img-transition;
+      }
 
       &__list {
-        @include flex(flex, center, center);
-        column-gap: $mb-0-5;
-        // border: $border;
+        @include flex;
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: $mb-2;
+        padding: $mb-3-5 0 0 $mb-2;
+
+        @media screen and (min-width: rem(768)) {
+          flex-direction: row;
+          padding: 0;
+          column-gap: $mb-3;
+        }
 
         &-item {
-          @include font($normal-font-size, $h1-font-size, $font-medium);
-          color: $white-color;
-          // border: $border;
+          position: relative;
 
           &__link {
-            padding: 12px 10.5px 7px;
-            border-radius: 50px;
-            transition: $ease-io $img-transition;
+            @include font;
+            text-transform: uppercase;
+            transition: $ease-in $img-transition;
+            z-index: $z-fixed;
 
-            &:hover {
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
               background-color: $main-green-color;
-              transition: $ease-io $img-transition;
+              width: 100%;
+              opacity: 1;
+              height: 100%;
+              transform-origin: right;
+              transform: scaleX(0);
+              z-index: -1;
+              transition: transform $ease-in $img-transition;
             }
 
-            &-icon {
-              // border: $border;
+            &:hover::before {
+              transform-origin: left;
+              transform: scaleX(1);
             }
           }
         }
       }
     }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    .close,
+    .toggle {
+      display: none;
+      font-size: $h1-font-size;
+
+      @media screen and (max-width: rem(767)) {
+        display: block;
+      }
+    }
   }
 }
 
-// =========== FIRSTROW ===========
-.firstrow {
-  &__container {
-    // TITLE
-    &-title {
-      color: $white-color;
-      letter-spacing: $normal-spacing;
-      // text-indent: 6px;
+// ================= FIRSTSECTION ================
+.firstSection{
+  &__container{
+    @include grid;
+    row-gap: rem(30);
 
-      span {
-        color: $main-green-color;
+    @media screen and (min-width: rem(768)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .one{
+      @include grid;
+      @include font;
+      font-weight: $font-semi-bold;
+      font-size: $h3-font-size;
+      align-items: center;
+
+      span{
+        position: relative;
+
+        &::after{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $main-green-color;
+          width: 100%;
+          height: 13px;
+          z-index: -1;
+        }
+      }
+    }
+
+    .two{
+      @include grid;
+      gap: 0;
+      grid-template-columns: repeat(2);
+      justify-items: center;
+
+      @media screen and (min-width: rem(768)){
+        grid-column: span 2;
       }
 
-      &__first {
-        font-size: $biggest-font-size;
-      }
-
-      &__second {
+      a{
+        @include grid;
+        gap: rem(5);
+        grid-template-columns: 10% 1fr;
+        @include font;
+        color: $black-color;
         font-size: $h2-font-size;
-      }
-    }
+        background-color: $main-green-color;
+        border: 2px solid $black-color;
+        padding: $mb-0-5 $mb-0-75;
+        justify-items: center;
+        align-items: center;
 
-    // LINKS
-    &-links {
-      @include font($body-font, $normal-font-size, $font-semi-bold);
-      @include flex(flex, center, center);
-      column-gap: $mb-1-5;
-      margin-bottom: $mb-1-5;
-
-      &__github,
-      &__curriculum {
-        letter-spacing: $normal-spacing;
-        padding: $mb-0-75 $mb-1-5;
-        color: $white-color;
-        border-radius: 1px;
-        border-width: 1.5px;
-        border-style: solid;
-        border-color: $white-color;
-        cursor: pointer;
-        transition: $ease-io $img-transition;
-
-        &:hover {
-          color: $main-green-color;
-          border-color: $main-green-color;
-          transition: $ease-io $img-transition;
-        }
-      }
-    }
-  }
-}
-
-// ========== SECONDROW ============
-.secondrow {
-  &__container {
-    letter-spacing: $normal-spacing;
-    &-title {
-      color: $white-color;
-      &__h1 {
-        span {
-          color: $main-green-color;
+        i{
+          @include flex;
+          align-items: center;
         }
       }
     }
 
-    &-desc {
-      &__text {
-        color: $white-color;
+    .three{
+      width: clamp(rem(200), rem(250), rem(350));
+      justify-self: center;
+
+      @media screen and (min-width: rem(768)) {
+        grid-column: 2/3;
+        grid-row: -1/-2;
       }
-    }
-  }
-}
 
-// ============= THIRDROW =================
-.thirdrow {
-  &__container {
-    letter-spacing: $normal-spacing;
-    &-title {
-      color: $white-color;
-      &__h1 {
-        span {
-          color: $main-green-color;
-        }
-      }
-    }
-
-    &-glide {
-      .glide {
-        height: 100px;
-        width: 100px;
-        border: $border;
-
-        &__track {
-          height: 100px;
-          width: 100px;
-          border: $border;
-        }
-
-        &__slides {
-          // width: 100%;
-          border: $border;
-        }
-
-        &__slide {
-          // width: 100%;
-          color: $white-color;
-          border: $border;
-        }
-      }
     }
   }
 }

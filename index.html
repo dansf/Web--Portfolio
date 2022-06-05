@@ -5,162 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="DanSFig portfolio" />
+    <meta name="author" content="Dansfig" />
     <meta
       name="keywords"
       content="Protfolio, Dansf, Dansfig, DanSFig, Front-end, Frontend, frontend, JavaScript, TypeScript, Design"
     />
     <!-- Logo Icon -->
-    <link rel="icon" href="./assets/logo/appicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="./assets/logo/app192.png" />
+    <link rel="icon" href="assets/logo/appicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/logo/app192.png" />
+    <!-- Remix Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <!-- Manisfet Link -->
-    <link rel="manifest" href="./assets/logo/manifest.json" />
+    <!-- Manifest Link -->
+    <link
+      rel="manifest"
+      href="assets/logo/manifest.json"
+      crossorigin="use-credentials"
+    />
     <!-- GoogleFont Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <!-- Css Link -->
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
     <title>DanSFig.com</title>
   </head>
   <body>
-    <div class="top"></div>
-    <!-- <header class="header">
-      <a
-        class="header__logo"
-        style="visibility: hidden; display: none"
-        aria-disabled="true"
-        >Dansfig Portfolio</a
-      >
-      <nav class="header__nav">
-        <div class="header__nav-container">
+    <header class="header">
+      <nav class="header__nav container">
+        <a class="header__logo" aria-disabled="true">DanSFig</a>
+        <div class="header__nav-container menu">
           <ul class="header__nav-container__list">
             <li class="header__nav-container__list-item">
-              <a class="header__nav-container__list-item__link">
-                <i
-                  class="ri-home-2-line header__nav-container__list-item__link-icon"
-                ></i>
-              </a>
+              <a class="header__nav-container__list-item__link"> Home </a>
             </li>
             <li class="header__nav-container__list-item">
-              <a class="header__nav-container__list-item__link">
-                <i
-                  class="ri-user-line header__nav-container__list-item__link-icon"
-                ></i>
-              </a>
+              <a class="header__nav-container__list-item__link"> Projects </a>
             </li>
             <li class="header__nav-container__list-item">
-              <a class="header__nav-container__list-item__link">
-                <i
-                  class="ri-fire-line header__nav-container__list-item__link-icon"
-                ></i>
-              </a>
+              <a class="header__nav-container__list-item__link"> About me </a>
             </li>
             <li class="header__nav-container__list-item">
-              <a class="header__nav-container__list-item__link">
-                <i
-                  class="ri-book-mark-line header__nav-container__list-item__link-icon"
-                ></i>
-              </a>
+              <a class="header__nav-container__list-item__link"> Curriculum </a>
             </li>
             <li class="header__nav-container__list-item">
-              <a class="header__nav-container__list-item__link">
-                <i
-                  class="ri-chat-4-line header__nav-container__list-item__link-icon"
-                ></i>
-              </a>
+              <a class="header__nav-container__list-item__link"> Contact me </a>
             </li>
           </ul>
+          <div class="close">
+            <i class="ri-close-line"></i>
+          </div>
         </div>
+        <i class="ri-function-line toggle"></i>
       </nav>
-    </header> -->
+    </header>
 
-    <main class="main container">
-      <section class="firstrow section">
-        <div class="firstrow__container container">
-          <div class="firstrow__container-title section-title">
-            <h1 class="firstrow__container-title__second">Hi,</h1>
-            <h1 class="firstrow__container-title__first">
-              I'm <span>D</span>aniel Silva,
-            </h1>
-            <h1 class="firstrow__container-title__second">
-              <span>F</span>ront-end Develo<span>p</span>er
+    <main class="main">
+      <section class="firstSection section">
+        <div class="firstSection__container container">
+          <div class="one">
+            <h1>
+              Hi, <br />I'm <span>Daniel Silva,</span> <br />
+              FullStack Developer
             </h1>
           </div>
-          <div class="firstrow__container-links">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/dansf"
-              class="firstrow__container-links__github"
-              >GitHub</a
-            >
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://drive.google.com/file/d/1Qlf4gmnUOw2bdf95vGSHt5wafpVjtsJt/view?usp=sharing"
-              class="firstrow__container-links__curriculum"
-              >Curriculum</a
-            >
+          <div class="two">
+            <a href="#" target="_blank" rel="noreferrer noopener">
+              <i class="ri-github-line"></i>
+              <p>GitHub</p>
+            </a>
+            <a href="#" target="_blank" rel="noreferrer noopener">
+              <i class="ri-file-text-line"></i>
+              <p>Curriculum</p>
+            </a>
           </div>
-          <div class="firstrow__container-img">
-            <img
-              src="./assets/img/000.jpg"
-              alt="DansfigIMG"
-              class="firstrow__container-img__image"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="secondrow section">
-        <div class="secondrow__container container">
-          <div class="secondrow__container-title section-title">
-            <h1 class="secondrow__container-title__h1">
-              <span>A</span>bout me
-            </h1>
-          </div>
-          <div class="secondrow__container-desc">
-            <p class="secondrow__container-desc__text">
-              I'm a Front-end developer with a degree in computer science.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="thirdrow section">
-        <div class="thirdrow__container container">
-          <div class="thirdrow__container-title section-title">
-            <h1 class="thirdrow__container-title__h1"><span>P</span>rojects</h1>
-          </div>
-          <div class="thirdrow__container-glide">
-            <div class="glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                  <li class="glide__slide">Slide 1</li>
-                  <li class="glide__slide">Slide 2</li>
-                  <li class="glide__slide">Slide 3</li>
-                  <li class="glide__slide">Slide 4</li>
-                  <li class="glide__slide">Slide 5</li>
-                </ul>
-              </div>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-              </div>
-            </div>
+          <div class="three">
+            <img src="/assets/img/000.jpg" alt="Perfil-image" />
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+
+    <!-- <footer class="footer">
+      <div class="footer__container section">
+        <div class="footer__container-block">
+          <h3 class="footer__container-block__title">Home</h3>
+        </div>
+        <div class="footer__container-block">
+          <h3 class="footer__container-block__title">About me</h3>
+        </div>
+        <div class="footer__container-block">
+          <h3 class="footer__container-block__title">Projects</h3>
+        </div>
+        <div class="footer__container-block">
+          <h3 class="footer__container-block__title">Skills</h3>
+        </div>
+        <div class="footer__container-block">
+          <h3 class="footer__container-block__title">Contact me</h3>
+        </div>
+        <div class="footer__copyright">
+          &copy; Todos os direitos reservados por
+          <a href="https://github.com/dansf">DanSFig.com</a>; 2022 -
+          <span class="spancopy"></span>
+        </div>
+      </div>
+    </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="./js/index.js"></script>
