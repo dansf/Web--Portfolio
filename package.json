@@ -1,20 +1,23 @@
 {
-  "name": "portfolio",
-  "author": "Dansfig",
-  "description": "<h2 align=\"center\">DanSFig - Portfolio 🧔🏿</h2>",
+  "name": "teste",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./index.ts",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --watch \"./**\" --ext \"ts,json\" --exec \"ts-node ./index.ts\"",
+    "build": "tsc",
+    "start": "node ./dist/index.js"
   },
-  "repository": "git+https://github.com/dansf/Web--Portfolio.git",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dansf/Web--Portfolio/issues"
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/typescript": "^2.0.0",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "typescript": "^4.7.3"
   },
-  "homepage": "https://github.com/dansf/Web--Portfolio#readme",
   "dependencies": {
-    "global": "^4.4.0",
-    "typescript": "^4.7.2"
+    "@types/sqlite3": "^3.1.8",
+    "sqlite3": "^5.0.8",
+    "ts-node": "^10.8.1"
   }
 }
