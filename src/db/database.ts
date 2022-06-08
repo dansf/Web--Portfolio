@@ -1,9 +1,9 @@
 import sqlite3 from "sqlite3";
 
-const DBSOURCE = "/comments.db";
+const DBSOURCE = "item.db";
 
 const SQL_COMMENTS_CREATE = `
-    CREATE TABLE COMMENTS (
+    CREATE TABLE ITEM (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
         descricao TEXT

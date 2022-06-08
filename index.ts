@@ -15,9 +15,9 @@ app.use(express.static(`${__dirname}/public`));
 
 /* GET is commonly used when the client is pulling data from the server
     Listar ou listar um em um CRUD */
-app.get("/comments", (req, res) => {
-  console.log(`Request received at /comments`);
-  database.all("SELECT * FROM comments", (err, rows) => {
+app.get("/item", (req, res) => {
+  console.log(`GET request received at /item`);
+  database.all("SELECT * FROM ITEM", (err, rows) => {
     if (err) {
       console.log(`Error: ${err}`);
     } else {
@@ -28,8 +28,8 @@ app.get("/comments", (req, res) => {
 
 /* POST is commonly used when the client are sending data to the server
     Criar em um CRUD */
-app.post("/comments", (req, res) => {
-  console.log("POST request at /comments");
+app.post("/item/post", (req, res) => {
+  console.log("POST request at /itens");
 });
 
 // "Escutar" a porta que o servidor está sendo executado

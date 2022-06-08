@@ -66,7 +66,7 @@ const swiperAboutMe = async () => {
   await receiveText()
 }
 
-h4.addEventListener("click", swiperAboutMe)
+// h4.addEventListener("click", swiperAboutMe)
 
 // ============= Date CopyRight ===============
 // var dateYear = document.querySelector(".spancopy"),
